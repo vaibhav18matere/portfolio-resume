@@ -1,4 +1,4 @@
-import Declaration from '@/components/Declaration';
+import Blogs from '@/components/Blogs';
 import Education from '@/components/Education';
 import Experience from '@/components/Experience';
 import Header from '@/components/Header';
@@ -15,8 +15,8 @@ export default function Home() {
           <Skills />
           <Experience />
           <Projects />
+          <Blogs />
           <Education />
-          <Declaration />
         </article>
       </main>
     </>
