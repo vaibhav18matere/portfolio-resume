@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { HeaderSocialLinks } from '@/types/types';
 import { links } from '@/data/header.data';
-import { ArrowDownTrayIcon, MapPinIcon } from '@heroicons/react/24/outline';
+// import { ArrowDownTrayIcon, MapPinIcon } from '@heroicons/react/24/outline';
 
 export default function Header() {
   return (
@@ -22,12 +22,9 @@ export default function Header() {
           <div className="whitespace-nowrap1">
             <h1 className="text-2xl font-bold print:text-lg">
               Vaibhav Matere
-              <span className="ml-2 text-sm font-light print:hidden">
-                (He/Him)
-              </span>
             </h1>
             <div className="text-md mb-3 text-gray-700 print:mb-3 print:text-sm xl:mb-0">
-              FullStack Developer
+              FullStack Web Developer | MERN
             </div>
           </div>
           <div className="flex flex-col items-end justify-between">
@@ -43,11 +40,10 @@ export default function Header() {
             </nav>
           </div>
         </div>
-        <div className="flex flex-col space-y-4 md:flex-row md:items-center md:justify-between md:space-y-0">
-          <address className="flex items-center text-sm text-gray-500 print:text-xs">
-            <MapPinIcon className="mr-2 w-4 text-gray-700" />
-            Pune, Maharashtra, India
-          </address>
+        
+        {/* download resume button  */}
+
+        {/* <div className="flex flex-col space-y-4 md:flex-row md:items-center md:justify-between md:space-y-0">
           <a
             className="group flex max-w-xs rounded-lg bg-violet-500 font-semibold text-white transition-transform hover:scale-x-105 print:hidden"
             href="/#!"
@@ -60,7 +56,7 @@ export default function Header() {
               <ArrowDownTrayIcon className="w-5" />
             </button>
           </a>
-        </div>
+        </div> */}
       </div>
     </header>
   );
