@@ -37,7 +37,6 @@ export interface TechStack {
 export interface CompanyType {
   id: string;
   name: string;
-  logo: string;
   url: string;
   location: string;
   type: 'Full Time' | 'Part Time';
@@ -47,10 +46,7 @@ export interface CompanyType {
     id: string;
     title: string;
     responsibilities: string;
-    startDate: string;
-    endDate?: string;
   }[];
-  projects: ProjectType[];
   hide?: boolean;
 }
 

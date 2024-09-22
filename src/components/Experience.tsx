@@ -1,14 +1,6 @@
-import {
-  CalendarIcon,
-  ClockIcon,
-  MapPinIcon
-} from '@heroicons/react/24/outline';
-
-import Image from 'next/image';
-import Link from 'next/link';
+import { ClockIcon, MapPinIcon } from '@heroicons/react/24/outline';
 import { MDXRemote } from 'next-mdx-remote/rsc';
-import { duration } from '@/utils/date';
-import { getExperience } from '@/utils/api';
+import { getExperience } from '@/data/company.data';
 
 export default async function Experience() {
   const experiences = await getExperience();
@@ -25,34 +17,14 @@ export default async function Experience() {
               key={company.id}
               id={company.id}
             >
-              <div className="mr-6 hidden print:block md:block">
-                <a
-                  href={company.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Image
-                    src={company.logo}
-                    alt={company.name}
-                    className="aspect-square w-20 cursor-pointer rounded-xl object-contain object-center p-1 shadow print:w-10"
-                    width={60}
-                    height={60}
-                    loading="lazy"
-                  />
-                </a>
-              </div>
               <div className="w-full space-y-2">
                 <div>
-                  <h4 className="text-sm font-medium print:text-xs">
-                    {company.name}
-                  </h4>
+                  <a href={company.url}>
+                    <h4 className="text-sm font-medium print:text-xs">
+                      {company.name}
+                    </h4>
+                  </a>
                   <div className="mt-1 flex w-full flex-col items-start gap-1 text-sm text-gray-500 print:flex-row print:text-sm md:flex-row md:items-center md:gap-4">
-                    <div className="flex items-center">
-                      <CalendarIcon className="mr-1 w-4 print:w-3" />
-                      <time>
-                        {duration(company.startDate, company.endDate)}
-                      </time>
-                    </div>
                     <div className="flex items-center">
                       <MapPinIcon className="mr-1 w-4 print:w-3" />
                       <span>{company.location}</span>
@@ -77,10 +49,6 @@ export default async function Experience() {
                         <h5 className="text-sm font-semibold text-gray-700">
                           {role.title}
                         </h5>
-                        <time className="mb-1 mt-1 flex items-center text-sm font-normal leading-none text-gray-500 print:text-sm">
-                          <CalendarIcon className="mr-1 w-4 print:w-3" />
-                          {duration(role.startDate, role.endDate)}
-                        </time>
                         <div className="role-responsibilities">
                           <h5 className="mt-2 hidden text-sm text-gray-500 print:mt-1">
                             Responsibilities:
@@ -93,26 +61,6 @@ export default async function Experience() {
                     );
                   })}
                 </ol>
-                {company.projects.length > 0 && (
-                  <div className="company-projects flex flex-col gap-1 print:hidden md:flex-row">
-                    <h5 className="text-sm font-semibold text-gray-600">
-                      Projects:
-                    </h5>
-                    <div className="company-projectlist flex flex-wrap gap-1.5">
-                      {company.projects.map((project) => {
-                        return (
-                          <Link
-                            href={`#${project.id}`}
-                            key={project.id}
-                            className="inline-block rounded-md bg-gray-100 px-2 py-0.5 text-xs text-gray-500"
-                          >
-                            {project.title}
-                          </Link>
-                        );
-                      })}
-                    </div>
-                  </div>
-                )}
                 <div className="border-b border-gray-200 pt-4 group-last:hidden print:hidden"></div>
               </div>
             </div>
