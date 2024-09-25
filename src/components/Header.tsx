@@ -6,7 +6,7 @@ import { ArrowDownTrayIcon } from '@heroicons/react/24/outline';
 export default function Header() {
   return (
     <header className="mx-auto w-full space-y-5 overflow-hidden rounded-xl bg-white shadow print:rounded-none print:border-b-2 print:shadow-none lg:max-w-5xl">
-      <div className="relative h-28 overflow-visible bg-[url('/images/banner-1.jpg')] bg-cover bg-fixed print:bg-local md:h-40">
+      <div className="relative h-16 overflow-visible bg-fixed print:bg-local md:h-20">
         <div className="translate-1/2 print:space-between absolute -bottom-10 z-10 flex w-full items-end px-8 print:justify-between">
           <Image
             src="/images/profile-photo.png"
@@ -21,7 +21,7 @@ export default function Header() {
         <div className="flex flex-col items-start justify-between md:mb-4 xl:flex-row xl:items-center">
           <div className="whitespace-nowrap1">
             <h1 className="text-2xl font-bold print:text-lg">Vaibhav Matere</h1>
-            <div className="text-md mb-3 text-gray-700 print:mb-3 print:text-sm xl:mb-0">
+            <div className="text-md mb-3 text-gray-950 print:mb-3 print:text-sm xl:mb-0">
               FullStack Web Developer | MERN
             </div>
           </div>
