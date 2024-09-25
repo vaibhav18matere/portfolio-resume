@@ -28,7 +28,7 @@ export default async function Education() {
                   <h4 className="text-sm font-medium print:text-xs">
                     {education.school} ({education.affiliation})
                   </h4>
-                  <div className="mt-1 flex w-full flex-col space-y-0.5 text-sm text-gray-500 print:text-sm">
+                  <div className="mt-1 flex w-full flex-col space-y-0.5 text-sm text-gray-800 print:text-sm">
                     <div className="flex items-center">
                       <AcademicCapIcon className="mr-2 w-4" />
                       <span>{education.name}</span>
