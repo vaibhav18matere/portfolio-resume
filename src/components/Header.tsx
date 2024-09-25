@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { HeaderSocialLinks } from '@/types/types';
 import { links } from '@/data/header.data';
-// import { ArrowDownTrayIcon, MapPinIcon } from '@heroicons/react/24/outline';
+import { ArrowDownTrayIcon } from '@heroicons/react/24/outline';
 
 export default function Header() {
   return (
@@ -20,9 +20,7 @@ export default function Header() {
       <div className="flex flex-col p-6 pt-8 print:p-8 print:pb-4">
         <div className="flex flex-col items-start justify-between md:mb-4 xl:flex-row xl:items-center">
           <div className="whitespace-nowrap1">
-            <h1 className="text-2xl font-bold print:text-lg">
-              Vaibhav Matere
-            </h1>
+            <h1 className="text-2xl font-bold print:text-lg">Vaibhav Matere</h1>
             <div className="text-md mb-3 text-gray-700 print:mb-3 print:text-sm xl:mb-0">
               FullStack Web Developer | MERN
             </div>
@@ -40,10 +38,8 @@ export default function Header() {
             </nav>
           </div>
         </div>
-        
-        {/* download resume button  */}
 
-        {/* <div className="flex flex-col space-y-4 md:flex-row md:items-center md:justify-between md:space-y-0">
+        <div className="flex flex-col space-y-4 md:flex-row md:items-center md:justify-between md:space-y-0">
           <a
             className="group flex max-w-xs rounded-lg bg-violet-500 font-semibold text-white transition-transform hover:scale-x-105 print:hidden"
             href="/#!"
@@ -56,7 +52,7 @@ export default function Header() {
               <ArrowDownTrayIcon className="w-5" />
             </button>
           </a>
-        </div> */}
+        </div>
       </div>
     </header>
   );
