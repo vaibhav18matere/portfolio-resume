@@ -24,7 +24,7 @@ export default async function Experience() {
                       {company.name}
                     </h4>
                   </a>
-                  <div className="mt-1 flex w-full flex-col items-start gap-1 text-sm text-gray-500 print:flex-row print:text-sm md:flex-row md:items-center md:gap-4">
+                  <div className="mt-1 flex w-full flex-col items-start gap-1 text-sm text-gray-700 print:flex-row print:text-sm md:flex-row md:items-center md:gap-4">
                     <div className="flex items-center">
                       <MapPinIcon className="mr-1 w-4 print:w-3" />
                       <span>{company.location}</span>
@@ -46,14 +46,14 @@ export default async function Experience() {
                         key={role.id}
                       >
                         <div className="absolute -left-1.5 mt-1 h-3 w-3 rounded-full border border-white bg-gray-200"></div>
-                        <h5 className="text-sm font-semibold text-gray-700">
+                        <h5 className="text-sm font-semibold text-gray-950">
                           {role.title}
                         </h5>
                         <div className="role-responsibilities">
-                          <h5 className="mt-2 hidden text-sm text-gray-500 print:mt-1">
+                          <h5 className="mt-2 hidden text-sm text-gray-600 print:mt-1">
                             Responsibilities:
                           </h5>
-                          <div className="prose prose-sm mt-2 max-w-none leading-snug text-gray-500 print:text-sm print:leading-tight">
+                          <div className="prose prose-sm mt-2 max-w-none leading-snug text-gray-800 print:text-sm print:leading-tight">
                             <MDXRemote source={role.responsibilities} />
                           </div>
                         </div>

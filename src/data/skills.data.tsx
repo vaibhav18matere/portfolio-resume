@@ -582,7 +582,7 @@ export const SkillTag = ({ skill }: { skill: SkillType }) => {
       title={skill.tooltip ?? skill.name}
     >
       <span className="mr-2">{skill.icon}</span>
-      <span className="text-gray-600">{skill.name}</span>
+      <span className="text-gray-800">{skill.name}</span>
     </span>
   );
 };
